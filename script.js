@@ -1,0 +1,14 @@
+$(document).ready(function(){
+    $(".desktop-mobile-icon").click(function(){
+        $(this).css("display","none");
+        $(".mobile-icon").css("display","block");
+        $(".mobile-container").css("display","block");
+        $(".mobile").css("display","block");
+    });
+    $(".mobile-icon").click(function(){
+        $(this).css("display","none");
+        $(".desktop-mobile-icon").css("display","flex");
+        $(".mobile-container").css("display","none");
+        $(".mobile").css("display","none");
+    });
+});

@@ -1,0 +1,452 @@
+:root{
+    --softorange:hsl(35, 77%, 62%);
+    --softred:hsl(5, 85%, 63%);
+
+    --offwhite:hsl(36, 100%, 99%);
+    --grayishblue:hsl(233, 8%, 79%);
+    --darkgrayishblue:hsl(236, 13%, 42%);
+    --darkblue:hsl(240, 100%, 5%)
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Inter';
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+ul,li{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+div.mobile{
+    display: none;
+}
+
+ul.desktop{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+}
+
+ul li{
+    cursor: pointer;
+}
+
+li{
+    font-size: 1.2em;
+    color: var(--darkblue);
+}
+
+li:hover{
+    color: var(--softred);
+}
+
+h1{
+    margin: auto;
+    font-size: 4em;
+    color: var(--darkblue);
+    font-weight: 800;
+}
+
+h2{
+    font-size: 3em;
+    color: var(--softorange);
+    font-weight: 700;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.container{
+    margin: 0 auto;    
+    max-width: 1440px;
+    padding-inline:1rem;
+}
+
+.first-section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 3%;
+}
+
+.first-section .row-main{
+    width: 68%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+aside{
+    width: 29%;
+    background: var(--darkblue);
+    color: var(--offwhite);
+    padding: 2rem;
+    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.first-section .row-main .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+
+.first-section .row-main .row .col-1{
+    width: 45%;
+}
+
+.first-section .row-main .row .col-2{
+    width: 50%;
+}
+
+.first-section .row-main .col-1 p{
+    font-size: 1.2em;
+    color: var(--darkblue);
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.row-2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.btn-primary{
+    background: var(--softred);
+    color: var(--offwhite);
+    font-size: 1.2em;
+    border: none;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.btn-primary:hover{
+    background-color: var(--darkblue);
+}
+
+article{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+article a{
+    font-size: 1.2em;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--offwhite);
+    margin: 0;
+}
+
+article a:hover{
+    color: var(--softorange);
+}
+
+article p{
+    font-size: 0.9375em;
+    color: var(--darkgrayishblue);
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+article::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-bottom: var(--darkgrayishblue) 1px solid;
+}
+
+h2,h4,h5,p{
+    margin: 0;
+}
+
+section.second-section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section.second-section .card{
+    display: flex;
+    flex-direction: row;
+    width: 33.33%;
+    gap: 1rem;
+}
+
+section.second-section .card .col-2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section.second-section h5{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    font-size: 2em;
+    font-weight: 800;
+    color: var(--grayishblue);
+}
+
+section.second-section h4:hover{
+   color: var(--softred);
+}
+
+section.second-section h4{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: 800;
+    color: var(--darkblue);
+    cursor: pointer;
+}
+
+section.second-section a{
+    text-decoration: none;
+}
+
+section.second-section p{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--darkgrayishblue);
+    line-height: 2;
+}
+
+section.second-section .card img{
+    width: -webkit-fill-available;
+}
+
+
+/* a.mobile-icon{
+    display: none;
+    align-items: center;
+}
+
+a.mobile-icon > span.icon{
+    background-image: url(./assets/images/icon-menu.svg);
+    background-image: url(./assets/images/icon-menu-close.svg);
+    padding: 8px 12px;
+    cursor: pointer;
+} */
+
+div.mobile-container{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+a.desktop-mobile-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a.mobile-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a.desktop-mobile-icon > span.icon{
+    background-image: url(./assets/images/icon-menu.svg);
+    width: 32px;
+    height: 17px;
+    cursor: pointer;
+}
+
+a.mobile-icon > span.icon {
+    background-image: url(./assets/images/icon-menu-close.svg);
+    width: 32px;
+    height: 31px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+}
+
+div.mobile > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+footer{
+    padding: 1rem;
+}
+
+.first-section .main-img{
+    width: 100%;
+    max-height: 300px;
+    background: url("./assets/images/image-web-3-desktop.jpg") no-repeat;
+}
+
+div.mobile{
+    display: none;
+    position: fixed;
+    inset:  0 0 0 30%;
+    background: var(--offwhite);
+    z-index: 1;
+}
+
+  /* Small devices  */
+  @media only screen and (min-width: 280px) {
+    .btn-primary{
+        width: fit-content;
+    }
+    h1{
+        font-size: 3em;
+        margin-bottom: 1rem;
+    }
+    a.mobile-icon{
+        display: flex;
+    }
+    
+    .first-section .main-img{
+        background: url('./assets/images/image-web-3-mobile.jpg') no-repeat;
+        background-size: cover;
+        height: 300px;
+    }
+
+    section.second-section{
+        flex-direction:column;
+        gap: 2rem;
+    }
+
+    ul.desktop{
+        display: none;
+    }
+ 
+    section.second-section .card{
+        width: 100%;
+    }
+
+    .first-section .row-main , aside{
+        width: 100%;
+    }
+
+    .first-section .row-main .row .col-1{
+        width: 100%;
+    }
+
+    .first-section .row-main{
+        margin-bottom: 5rem;
+    }
+
+    a.desktop-mobile-icon > span.icon{
+        display: block;
+    }
+    .second-section .col-1 img{
+        height: auto;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .second-section .col-1{
+        width: 40%;
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    .first-section .main-img{
+        background: url("./assets/images/image-web-3-desktop.jpg") no-repeat;
+        background-size: cover;
+        height: 600px;
+    }
+    .second-section .col-1 img{
+        height: 150px;
+    }
+  }
+    /* Extra large devices (large laptops and desktops, 1160px and up) */
+  @media only screen and (min-width: 1160px) {
+    section.second-section{
+        flex-direction:row;
+        gap:0;
+    }
+
+    .first-section .row-main{
+        width: 68%;
+        margin-bottom: 0;
+    }
+    
+    section.second-section .card{
+        width: 33.33%;
+    }
+
+    aside{
+        width: 29%;
+    }
+
+    .first-section .row-main .row .col-1{
+        width: 45%;
+    }
+ 
+    ul.desktop{
+        display: flex;
+    }
+    
+    div.mobile{
+       display: none;
+    }
+
+    a.desktop-mobile-icon > span.icon{
+        display: none;
+    }
+
+  }
+
+
+
+
